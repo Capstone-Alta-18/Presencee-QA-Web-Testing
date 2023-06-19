@@ -97,5 +97,68 @@ public class DoAnAction {
                 Click.on(PresenseePage.on_Portal_Admin)
         );
     }
+    public static Performable clickPortalDosen() {
+        return Task.where("{0} click portal dosen",
+                Click.on(PresenseePage.Click_Portal_Dosen)
+        );
+    }
+    public static Performable onPortalDosen() {
+        return Task.where("{0} on portal dosen page",
+                Click.on(PresenseePage.on_Portal_Dosen)
+        );
+    }
+    public static Performable fillEmailFieldWithValue(String email) {
+        return Task.where("{0} fill Email field with " + email,
+                Enter.theValue(email).into(PresenseePage.Email_Field)
+                                .then(WaitUntil.the(PresenseePage.Email_Field, isCurrentlyVisible())
+                                                .forNoMoreThan(Duration.ofSeconds(60)))
+        );
+    }
+    public static Performable fillPasswordFieldWithValue(String password) {
+        return Task.where("{0} fill Email field with " + password,
+                Enter.theValue(password).into(PresenseePage.Password_Field)
+                        .then(WaitUntil.the(PresenseePage.Password_Field, isCurrentlyVisible())
+                                .forNoMoreThan(Duration.ofSeconds(60)))
+        );
+    }
+    public static Performable clickEnter() {
+        return Task.where("{0} click enter",
+                Click.on(PresenseePage.Click_Enter)
+        );
+    }
+    public static Performable onAdminPageDashboard() {
+        return Task.where("{0} on admin page dashboard",
+                Click.on(PresenseePage.on_Admin_Page_Dashboard)
+        );
+    }
+    public static Performable WantToVisibleTheirPassword() {
+        return Task.where("{0} want to visible their password",
+                Click.on(PresenseePage.Visible_Password)
+        );
+    }
+    public static Performable fillingEmailFieldWithValue(String email) {
+        return Task.where("{0} fill Email field with " + email,
+                Enter.theValue(email).into(PresenseePage.Filling_Email_Field)
+                        .then(WaitUntil.the(PresenseePage.Filling_Email_Field, isCurrentlyVisible())
+                                .forNoMoreThan(Duration.ofSeconds(60)))
+        );
+    }
+    public static Performable fillingPasswordFieldWithValue(String password) {
+        return Task.where("{0} fill Email field with " + password,
+                Enter.theValue(password).into(PresenseePage.Filling_Password_Field)
+                        .then(WaitUntil.the(PresenseePage.Filling_Password_Field, isCurrentlyVisible())
+                                .forNoMoreThan(Duration.ofSeconds(60)))
+        );
+    }
+    public static Performable clickLogin() {
+        return Task.where("{0} click login button",
+                Click.on(PresenseePage.Click_Login)
+        );
+    }
+    public static Performable onDosenPageDashboard() {
+        return Task.where("{0} on dosen page dashboard",
+                Click.on(PresenseePage.on_Dosen_Page_Dashboard)
+        );
+    }
 }
 

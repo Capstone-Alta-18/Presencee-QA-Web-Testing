@@ -94,6 +94,61 @@ public class PresenseeStepDefinitions {
     public void userIsOnPortalAdminPage(Actor actor) {
         actor.attemptsTo(DoAnAction.onPortalAdmin());
     }
+
+    @Then("{actor} click on portal dosen")
+    public void userClickOnPortalDosen(Actor actor) {
+        actor.attemptsTo(DoAnAction.clickPortalDosen());
+    }
+
+    @Then("{actor} is on portal dosen page")
+    public void userIsOnPortalDosenPage(Actor actor) {
+        actor.attemptsTo(DoAnAction.onPortalDosen());
+    }
+
+    @Then("{actor} input valid Email {string}")
+    public void userInputValidEmail(Actor actor, String Email) {
+        actor.attemptsTo(DoAnAction.fillEmailFieldWithValue(dotenv.get(Email)));
+    }
+
+    @Then("{actor} input valid Password {string}")
+    public void userInputValidPassword(Actor actor, String Password) {
+        actor.attemptsTo(DoAnAction.fillPasswordFieldWithValue(dotenv.get(Password)));
+    }
+
+    @Then("{actor} click enter")
+    public void userClickEnter(Actor actor) {
+        actor.attemptsTo(DoAnAction.clickEnter());
+    }
+
+    @Then("{actor} directed to admin page dashboard")
+    public void userDirectedToAdminPageDashboard(Actor actor) {
+        actor.attemptsTo(DoAnAction.onAdminPageDashboard());
+    }
+
+    @Then("{actor} want to visible their password")
+    public void userWantToVisibleTheirPassword(Actor actor) {
+        actor.attemptsTo(DoAnAction.WantToVisibleTheirPassword());
+    }
+
+    @Then("{actor} input correct Email {string}")
+    public void userInputCorrectEmail(Actor actor, String Email) {
+        actor.attemptsTo(DoAnAction.fillingEmailFieldWithValue(dotenv.get(Email)));
+    }
+
+    @Then("{actor} input correct Password {string}")
+    public void userInputCorrectPassword(Actor actor, String Password) {
+        actor.attemptsTo(DoAnAction.fillingPasswordFieldWithValue(dotenv.get(Password)));
+    }
+
+    @Then("{actor} click login")
+    public void userClickLogin(Actor actor) {
+        actor.attemptsTo(DoAnAction.clickLogin());
+    }
+
+    @Then("{actor} directed to dosen page dashboard")
+    public void userDirectedToDosenPageDashboard(Actor actor) {
+        actor.attemptsTo(DoAnAction.onDosenPageDashboard());
+    }
 }
 
 

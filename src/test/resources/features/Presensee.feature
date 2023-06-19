@@ -77,3 +77,44 @@ Feature: Presensee Page
     Then User click on portal admin
     Then User is on portal admin page
 
+  @Portal @PortalDosen @NormalPositive @PortalPresenseePageSuccess
+  Scenario: User on Portal Dosen page
+    Given User is on Presensee landing page
+    And User click on portal
+    Then User click on portal dosen
+    Then User is on portal dosen page
+
+  @AdminPage @Dashboard @NormalPositive @AdminPresenseePageDashboardSuccess
+  Scenario: User on Admin page dashboard
+    Given User is on Presensee landing page
+    And User click on portal
+    Then User click on portal admin
+    Then User is on portal admin page
+    Then User input valid Email "Email"
+    Then User input valid Password "Password"
+    Then User click enter
+    Then User directed to admin page dashboard
+
+  @AdminPage @Eyes @NormalPositive @AdminPresenseePageDashboardSuccess
+  Scenario: User on Admin page dashboard
+    Given User is on Presensee landing page
+    And User click on portal
+    Then User click on portal admin
+    Then User is on portal admin page
+    Then User input valid Email "Email"
+    Then User input valid Password "Password"
+    Then User want to visible their password
+    Then User click enter
+    Then User directed to admin page dashboard
+
+  @DosenPage @Dashboard @NormalNegative @DosenPresenseePageDashboardSuccess
+  Scenario: User on Portal Dosen page
+    Given User is on Presensee landing page
+    And User click on portal
+    Then User click on portal dosen
+    Then User is on portal dosen page
+    Then User input correct Email "Email"
+    Then User input correct Password "Password"
+    Then User click login
+    Then User directed to dosen page dashboard
+

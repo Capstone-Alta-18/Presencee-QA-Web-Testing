@@ -24,4 +24,15 @@ class PresenseePage extends PageObject {
     public static Target Click_Portal = Target.the("Portal").locatedBy("//*[@id=\"root\"]/div/div/div/nav/div/button[1]");
     public static Target Click_Portal_Admin = Target.the("Portal Admin").locatedBy("/html/body/div[2]/div/ul/li[1]/span/a");
     public static Target on_Portal_Admin = Target.the("Portal Admin Page").locatedBy("//*[@id=\"root\"]/div/div/div/div[3]");
+    public static Target Click_Portal_Dosen = Target.the("Portal Dosen").locatedBy("/html/body/div[2]/div/ul/li[3]/span/a");
+    public static Target on_Portal_Dosen = Target.the("Portal Dosen Page").locatedBy("//*[@id=\"root\"]/div/div/div/div[3]");
+    public static Target Email_Field = Target.the("Email Field").locatedBy("//*[@id=\"login-form_email\"]");
+    public static Target Password_Field = Target.the("Password Field").locatedBy("//*[@id=\"login-form_password\"]");
+    public static Target Click_Enter = Target.the("Enter Button").locatedBy("//*[@id=\"login-form\"]/div[4]/div/div/div/div/button");
+    public static Target on_Admin_Page_Dashboard = Target.the("Admin Page Dashboard").locatedBy("//*[@id=\"root\"]/div/div/div/section/section/main");
+    public static Target Visible_Password = Target.the("Eyes").locatedBy("//*[@id=\"login-form\"]/div[2]/div[1]/div/div[1]/div/span/span/span");
+    public static Target Filling_Email_Field = Target.the("Fill Email Page").locatedBy("//*[@id=\"login-form_username\"]");
+    public static Target Filling_Password_Field = Target.the("Fill Password Page").locatedBy("//*[@id=\"login-form_password\"]");
+    public static Target Click_Login = Target.the("Login Button").locatedBy("//*[@id=\"login-form\"]/div[5]/div/div/div/div/a/button");
+    public static Target on_Dosen_Page_Dashboard = Target.the("Dosen Page Dashboard").locatedBy("//*[@id=\"root\"]/div/div/div/section/section/main");
 }
