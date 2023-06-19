@@ -47,6 +47,53 @@ public class PresenseeStepDefinitions {
     public void userClickOnFeaturePresensiKamera(Actor actor) {
         actor.attemptsTo(DoAnAction.clickFeaturePresensiKamera());
     }
+    @Then("{actor} on faq page")
+    public void userChooseOnFaqPage(Actor actor) {
+        actor.attemptsTo(DoAnAction.onFAQPage());
+    }
+    @And("{actor} click on faq apa itu absensi online ?")
+    public void userClickOnFAQApaItuAbsensiOnline(Actor actor) {
+        actor.attemptsTo(DoAnAction.onFAQPage1());
+    }
+    @And("{actor} click on faq kenapa harus presensee ?")
+    public void userClickOnFAQKenapaHarusPresensee(Actor actor) {
+        actor.attemptsTo(DoAnAction.onFAQPage2());
+    }
+    @And("{actor} click on faq bagaimana cara presensee memvalidasi kehadiran ?")
+    public void userClickOnFAQBagaimanaCaraPresenseeMemvalidasiKehadiran(Actor actor) {
+        actor.attemptsTo(DoAnAction.onFAQPage3());
+    }
+    @And("{actor} click on faq bagaimana jika universitas saya ingin bekerja sama dengan presensee ?")
+    public void userClickOnFAQBagaimanaJikaUniversitasSayaInginBekerjaSamaDenganPresensee(Actor actor) {
+        actor.attemptsTo(DoAnAction.onFAQPage4());
+    }
+    @Then("{actor} on help page")
+    public void userOnHelpPage(Actor actor) {
+        actor.attemptsTo(DoAnAction.onHelpPage());
+    }
+    @And("{actor} click on contact us")
+    public void userClickOnContactUs(Actor actor) {
+        actor.attemptsTo(DoAnAction.clickContactUs());
+    }
+    @Then("{actor} on about us page")
+    public void userOnAboutUsPage(Actor actor) {
+        actor.attemptsTo(DoAnAction.onAboutUsPage());
+    }
+
+    @And("{actor} click on portal")
+    public void userClickOnPortal(Actor actor) {
+        actor.attemptsTo(DoAnAction.clickPortal());
+    }
+
+    @Then("{actor} click on portal admin")
+    public void userClickOnPortalAdmin(Actor actor) {
+        actor.attemptsTo(DoAnAction.clickPortalAdmin());
+    }
+
+    @Then("{actor} is on portal admin page")
+    public void userIsOnPortalAdminPage(Actor actor) {
+        actor.attemptsTo(DoAnAction.onPortalAdmin());
+    }
 }
 
 
