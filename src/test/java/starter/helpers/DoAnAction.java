@@ -136,16 +136,16 @@ public class DoAnAction {
                 Click.on(PresenseePage.Visible_Password)
         );
     }
-    public static Performable fillingEmailFieldWithValue(String email) {
-        return Task.where("{0} fill Email field with " + email,
-                Enter.theValue(email).into(PresenseePage.Filling_Email_Field)
+    public static Performable fillingEmailFieldWithValue(String EMAIL) {
+        return Task.where("{0} fill Email field with " + EMAIL,
+                Enter.theValue(EMAIL).into(PresenseePage.Filling_Email_Field)
                         .then(WaitUntil.the(PresenseePage.Filling_Email_Field, isCurrentlyVisible())
                                 .forNoMoreThan(Duration.ofSeconds(60)))
         );
     }
-    public static Performable fillingPasswordFieldWithValue(String password) {
-        return Task.where("{0} fill Email field with " + password,
-                Enter.theValue(password).into(PresenseePage.Filling_Password_Field)
+    public static Performable fillingPasswordFieldWithValue(String PASSWORD) {
+        return Task.where("{0} fill Email field with " + PASSWORD,
+                Enter.theValue(PASSWORD).into(PresenseePage.Filling_Password_Field)
                         .then(WaitUntil.the(PresenseePage.Filling_Password_Field, isCurrentlyVisible())
                                 .forNoMoreThan(Duration.ofSeconds(60)))
         );
@@ -158,6 +158,130 @@ public class DoAnAction {
     public static Performable onDosenPageDashboard() {
         return Task.where("{0} on dosen page dashboard",
                 Click.on(PresenseePage.on_Dosen_Page_Dashboard)
+        );
+    }
+    public static Performable onJadwalKuliah() {
+        return Task.where("{0} on jadwal kuliah page",
+                Click.on(PresenseePage.on_Jadwal_Kuliah)
+        );
+    }
+    public static Performable clickOnTambahkan() {
+        return Task.where("{0} on tambahkan page",
+                Click.on(PresenseePage.Click_On_Tambahkan)
+        );
+    }
+    public static Performable clickOnDataMahasiswa() {
+        return Task.where("{0} on Data Mahasiswa page",
+                Click.on(PresenseePage.Click_On_Data_Mahasiswa)
+        );
+    }
+    public static Performable chooseOnDataMahasiswa() {
+        return Task.where("{0} choose Data Mahasiswa",
+                Click.on(PresenseePage.Choose_On_Data_Mahasiswa)
+        );
+    }
+    public static Performable clickOnRightSign() {
+        return Task.where("{0} on first list of data mahasiswa",
+                Click.on(PresenseePage.Click_On_Right_Sign)
+        );
+    }
+    public static Performable clickOnNextSign() {
+        return Task.where("{0} on second list of data mahasiswa",
+                Click.on(PresenseePage.Click_On_Next_Sign)
+        );
+    }
+    public static Performable clickOnThirdSign() {
+        return Task.where("{0} on third list of data mahasiswa",
+                Click.on(PresenseePage.Click_On_Third_Sign)
+        );
+    }
+    public static Performable clickOnLastSign() {
+        return Task.where("{0} on last list of data mahasiswa",
+                Click.on(PresenseePage.Click_On_Last_Sign)
+        );
+    }
+    public static Performable searchNamaMahasiswa() {
+        return Task.where("{0} on search column of mahasiswa",
+                Click.on(PresenseePage.Search_Nama_Mahasiswa)
+        );
+    }
+    public static Performable fillingNamaMahasiswaFieldWithValue(String Nama) {
+        return Task.where("{0} fill Nama Mahasiswa field with " + Nama,
+                Enter.theValue(Nama).into(PresenseePage.Filling_Nama_Mahasiswa_Field)
+                        .then(WaitUntil.the(PresenseePage.Filling_Nama_Mahasiswa_Field, isCurrentlyVisible())
+                                .forNoMoreThan(Duration.ofSeconds(60)))
+        );
+    }
+    public static Performable clickOnDetailButton() {
+        return Task.where("{0} click detail button",
+                Click.on(PresenseePage.Click_Detail_Button)
+        );
+    }
+    public static Performable clickOnKembaliButton() {
+        return Task.where("{0} click Kembali button",
+                Click.on(PresenseePage.Kembali_Button)
+        );
+    }
+    public static Performable chooseOnDataDosen() {
+        return Task.where("{0} choose data dosen",
+                Click.on(PresenseePage.Choose_On_Data_Dosen)
+        );
+    }
+    public static Performable clickonFirstSign() {
+        return Task.where("{0} click next button",
+                Click.on(PresenseePage.Choose_On_First_Sign)
+        );
+    }
+    public static Performable clickonSecondSign() {
+        return Task.where("{0} click next button",
+                Click.on(PresenseePage.Choose_On_Second_Sign)
+        );
+    }
+    public static Performable searchNamaDosen() {
+        return Task.where("{0} on search column of dosen",
+                Click.on(PresenseePage.Search_Nama_Dosen)
+        );
+    }
+    public static Performable fillingNamaDosenFieldWithValue(String Nama) {
+        return Task.where("{0} fill Nama Mahasiswa field with " + Nama,
+                Enter.theValue(Nama).into(PresenseePage.Filling_Nama_Dosen_Field)
+                        .then(WaitUntil.the(PresenseePage.Filling_Nama_Dosen_Field, isCurrentlyVisible())
+                                .forNoMoreThan(Duration.ofSeconds(60)))
+        );
+    }
+    public static Performable clickOnDetailButtonFromDosenList() {
+        return Task.where("{0} click detail button from dosen list",
+                Click.on(PresenseePage.Click_Detail_Button_From_Dosen_List)
+        );
+    }
+    public static Performable seeDetailOfDosen() {
+        return Task.where("{0} see detail of dosen",
+                Click.on(PresenseePage.See_Detail_Of_Dosen)
+        );
+    }
+    public static Performable clickOnBackButton() {
+        return Task.where("{0} click back button",
+                Click.on(PresenseePage.Back_Button)
+        );
+    }
+    public static Performable clickOnRiwayatPresensi() {
+        return Task.where("{0} click riwayat presensi",
+                Click.on(PresenseePage.Riwayat_Presensi)
+        );
+    }
+    public static Performable clickOnLogout() {
+        return Task.where("{0} click log out",
+                Click.on(PresenseePage.Click_Log_Out)
+        );
+    }
+    public static Performable clickJadwalKuliah() {
+        return Task.where("{0} click jadwal kuliah",
+                Click.on(PresenseePage.Click_Jadwal_Kuliah)
+        );
+    }
+    public static Performable clickLogoutFromDosen() {
+        return Task.where("{0} click jadwal kuliah",
+                Click.on(PresenseePage.Click_Logout_From_Dosen_Page)
         );
     }
 }

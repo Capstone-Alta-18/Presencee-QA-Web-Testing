@@ -5,16 +5,8 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.github.cdimascio.dotenv.Dotenv;
 import net.serenitybdd.screenplay.Actor;
-import net.serenitybdd.screenplay.targets.Target;
-import net.serenitybdd.screenplay.waits.WaitUntil;
-import org.openqa.selenium.By;
 import starter.helpers.DoAnAction;
 import starter.helpers.NavigateTo;
-
-import java.time.Duration;
-
-import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isCurrentlyVisible;
-
 
 public class PresenseeStepDefinitions {
     Dotenv dotenv = Dotenv.load();
@@ -131,13 +123,13 @@ public class PresenseeStepDefinitions {
     }
 
     @Then("{actor} input correct Email {string}")
-    public void userInputCorrectEmail(Actor actor, String Email) {
-        actor.attemptsTo(DoAnAction.fillingEmailFieldWithValue(dotenv.get(Email)));
+    public void userInputCorrectEmail(Actor actor, String EMAIL) {
+        actor.attemptsTo(DoAnAction.fillingEmailFieldWithValue(dotenv.get(EMAIL)));
     }
 
     @Then("{actor} input correct Password {string}")
-    public void userInputCorrectPassword(Actor actor, String Password) {
-        actor.attemptsTo(DoAnAction.fillingPasswordFieldWithValue(dotenv.get(Password)));
+    public void userInputCorrectPassword(Actor actor, String PASSWORD) {
+        actor.attemptsTo(DoAnAction.fillingPasswordFieldWithValue(dotenv.get(PASSWORD)));
     }
 
     @Then("{actor} click login")
@@ -148,6 +140,125 @@ public class PresenseeStepDefinitions {
     @Then("{actor} directed to dosen page dashboard")
     public void userDirectedToDosenPageDashboard(Actor actor) {
         actor.attemptsTo(DoAnAction.onDosenPageDashboard());
+    }
+
+    @Then("{actor} click on Jadwal Kuliah")
+    public void userClickOnJadwalKuliah(Actor actor) {
+        actor.attemptsTo(DoAnAction.onJadwalKuliah());
+    }
+
+    @Then("{actor} click on Tambahkan")
+    public void userClickOnTambahkan(Actor actor) {
+        actor.attemptsTo(DoAnAction.clickOnTambahkan());
+    }
+
+    @Then("{actor} click on Data mahasiswa")
+    public void userClickOnDataMahasiswa(Actor actor) {
+        actor.attemptsTo(DoAnAction.clickOnDataMahasiswa());
+    }
+
+    @Then("{actor} click on Manage Data Data Mahasiswa")
+    public void userClickOnManageDataDataMahasiswa(Actor actor) {
+        actor.attemptsTo(DoAnAction.chooseOnDataMahasiswa());
+    }
+
+    @Then("{actor} see first data mahasiswa list")
+    public void userSeeFirstDataMahasiswaList(Actor actor) {
+        actor.attemptsTo(DoAnAction.clickOnRightSign());
+    }
+
+    @Then("{actor} see second data mahasiswa list")
+    public void userSeeSecondDataMahasiswaList(Actor actor) {
+        actor.attemptsTo(DoAnAction.clickOnNextSign());
+    }
+
+    @Then("{actor} see third data mahasiswa list")
+    public void userSeeThirdDataMahasiswaList(Actor actor) {
+        actor.attemptsTo(DoAnAction.clickOnThirdSign());
+    }
+
+    @Then("{actor} see forth data mahasiswa list")
+    public void userSeeForthDataMahasiswaList(Actor actor) {
+        actor.attemptsTo(DoAnAction.clickOnLastSign());
+    }
+
+    @Then("{actor} search mahasiswa in cari nama mahasiswa")
+    public void userSearchMahasiswaInCariNamaMahasiswa(Actor actor) {
+        actor.attemptsTo(DoAnAction.searchNamaMahasiswa());
+    }
+
+    @Then("{actor} input mahasiswa name {string}")
+    public void userInputMahasiswaNameInCariNamaMahasiswa(Actor actor, String Nama) {
+        actor.attemptsTo(DoAnAction.fillingNamaMahasiswaFieldWithValue(dotenv.get(Nama)));
+    }
+
+    @Then("{actor} click on Detail button")
+    public void userClickOnDetailButton(Actor actor) {
+        actor.attemptsTo(DoAnAction.clickOnDetailButton());
+    }
+
+    @Then("{actor} click on Kembali button")
+    public void userClickOnKembaliButton(Actor actor) {
+        actor.attemptsTo(DoAnAction.clickOnKembaliButton());
+    }
+
+    @Then("{actor} click on Manage Data Data Dosen")
+    public void userClickOnManageDataDataDosen(Actor actor) {
+        actor.attemptsTo(DoAnAction.chooseOnDataDosen());
+    }
+
+    @Then("{actor} see first data dosen list")
+    public void userSeeFirstDataDosenList(Actor actor) {
+        actor.attemptsTo(DoAnAction.clickonFirstSign());
+    }
+
+    @Then("{actor} see last data dosen list")
+    public void userSeeLastDataDosenList(Actor actor) {
+        actor.attemptsTo(DoAnAction.clickonSecondSign());
+    }
+
+    @Then("{actor} search dosen in cari nama Dosen")
+    public void userSearchDosenInCariNamaDosen(Actor actor) {
+        actor.attemptsTo(DoAnAction.searchNamaDosen());
+    }
+
+    @Then("{actor} input dosen name {string}")
+    public void userInputDosenNameInCariNamaDosen(Actor actor, String Nama) {
+        actor.attemptsTo(DoAnAction.fillingNamaDosenFieldWithValue(dotenv.get(Nama)));
+    }
+
+    @Then("{actor} click on detail button from dosen list")
+    public void userClickOnDetailButtonFromDosenList(Actor actor) {
+        actor.attemptsTo(DoAnAction.clickOnDetailButtonFromDosenList());
+    }
+
+    @Then("{actor} see detail of dosen")
+    public void userSeeDetailOfDosen(Actor actor) {
+        actor.attemptsTo(DoAnAction.seeDetailOfDosen());
+    }
+
+    @Then("{actor} click on Back button")
+    public void userClickOnReturnButton(Actor actor) {
+        actor.attemptsTo(DoAnAction.clickOnBackButton());
+    }
+    @Then("{actor} click on riwayat presensi")
+    public void userClickOnRiwayatPresensi(Actor actor) {
+        actor.attemptsTo(DoAnAction.clickOnRiwayatPresensi());
+    }
+
+    @Then("{actor} click logout")
+    public void userClickLogout(Actor actor) {
+        actor.attemptsTo(DoAnAction.clickOnLogout());
+    }
+
+    @Then("{actor} click on jadwal kuliah for lecturing")
+    public void userClickOnJadwalKuliahForLecturing(Actor actor) {
+        actor.attemptsTo(DoAnAction.clickJadwalKuliah());
+    }
+
+    @Then("{actor} click logout from dosen page dashboard")
+    public void userClickOnLogoutFromDosenPageDashboard(Actor actor) {
+        actor.attemptsTo(DoAnAction.clickLogoutFromDosen());
     }
 }
 
