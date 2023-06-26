@@ -108,7 +108,7 @@ Feature: Presensee Page
     Then User directed to admin page dashboard
 
   @DosenPage @Dashboard @NormalPositive @DosenPresenseePageDashboardSuccess
-  Scenario: User on Portal Dosen page
+  Scenario: User on Portal Dosen page dashboard
     Given User is on Presensee landing page
     And User click on portal
     Then User click on portal dosen
@@ -147,6 +147,43 @@ Feature: Presensee Page
     Then User see second data mahasiswa list
     Then User see third data mahasiswa list
     Then User see forth data mahasiswa list
+
+  @AdminDashboard @DataMahasiswa @MahasiswaDashboard @AlexanderInformation @NormalPositive @PresenseeDataMahasiswaSuccess
+  Scenario: Admin wanted to change information of alexander on data mahasiswa
+    Given User is on Presensee landing page
+    And User click on portal
+    Then User click on portal admin
+    Then User is on portal admin page
+    Then User input valid Email "Email"
+    Then User input valid Password "Password"
+    Then User click enter
+    Then User directed to admin page dashboard
+    Then User click on Data mahasiswa
+    Then User click on Manage Data Data Mahasiswa
+    Then User click on Detail button
+    Then User directed to data mahasiswa alexander
+    Then User change tahun masuk
+    Then User click on new entering year
+    Then User change Fakultas
+    Then User click on fakultas ekonomi
+    Then User change jurusan
+    Then User click on jurusan astronomi
+    Then User click on update button
+
+  @AdminDashboard @DataMahasiswa @MahasiswaDashboard @AlexanderInformation @DetailBackButtonInsideAlexanderInformation @DetailButtonMahasiswa @BackButtonInside @NormalPositive @PresenseeDataMahasiswaSuccess
+  Scenario: Admin wanted to click back button that inside of mahasiswa dashboard
+    Given User is on Presensee landing page
+    And User click on portal
+    Then User click on portal admin
+    Then User is on portal admin page
+    Then User input valid Email "Email"
+    Then User input valid Password "Password"
+    Then User click enter
+    Then User directed to admin page dashboard
+    Then User click on Data mahasiswa
+    Then User click on Manage Data Data Mahasiswa
+    Then User click on Detail button
+    Then User click on Back button to list of mahasiswa
 
   @AdminDashboard @DataMahasiswa @SearchNamaMahasiswa @NormalPositive @PresenseeDataMahasiswaSuccess
   Scenario: Admin wanted to search mahasiswa name in column

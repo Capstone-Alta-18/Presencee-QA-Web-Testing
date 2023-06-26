@@ -284,5 +284,50 @@ public class DoAnAction {
                 Click.on(PresenseePage.Click_Logout_From_Dosen_Page)
         );
     }
+    public static Performable onDataMahasiswaAlexander() {
+        return Task.where("{0} on alexander dashboard",
+                Click.on(PresenseePage.On_Data_Mahasiswa_Alexander)
+        );
+    }
+    public static Performable changeTahunMasuk() {
+        return Task.where("{0} on tahun masuk",
+                Click.on(PresenseePage.Change_Tahun_Masuk)
+        );
+    }
+    public static Performable clickOnNewEnteringYear() {
+        return Task.where("{0} click on new entering year",
+                Click.on(PresenseePage.Click_On_New_Entering_Year)
+        );
+    }
+    public static Performable changeFakultas() {
+        return Task.where("{0} change fakultas",
+                Click.on(PresenseePage.Change_Fakultas)
+        );
+    }
+    public static Performable clickOnFakultasEkonomi() {
+        return Task.where("{0} click on fakultas ekonomi",
+                Click.on(PresenseePage.Click_On_Fakultas_Ekonomi)
+        );
+    }
+    public static Performable changeJurusan() {
+        return Task.where("{0} change jurusan",
+                Click.on(PresenseePage.Change_Jurusan)
+        );
+    }
+    public static Performable clickOnJurusanAstronomi() {
+        return Task.where("{0} click on jurusan astronomi",
+                Click.on(PresenseePage.Click_On_Jurusan_Astronomi)
+        );
+    }
+    public static Performable clickOnUpdateButton() {
+        return Task.where("{0} click on update button",
+                Click.on(PresenseePage.Click_On_Update_Button)
+        );
+    }
+    public static Performable clickOnBackButtonToListOfMahasiswa() {
+        return Task.where("{0} click on back button to list of mahasiswa",
+                Click.on(PresenseePage.Click_On_Back_Button_To_List_Of_Mahasiswa)
+        );
+    }
 }
 

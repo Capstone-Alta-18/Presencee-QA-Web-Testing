@@ -260,6 +260,51 @@ public class PresenseeStepDefinitions {
     public void userClickOnLogoutFromDosenPageDashboard(Actor actor) {
         actor.attemptsTo(DoAnAction.clickLogoutFromDosen());
     }
+
+    @Then("{actor} directed to data mahasiswa alexander")
+    public void userDirectedToDataMahasiswaAlexander(Actor actor) {
+        actor.attemptsTo(DoAnAction.onDataMahasiswaAlexander());
+    }
+
+    @Then("{actor} change tahun masuk")
+    public void userChangeTahunMasuk(Actor actor) {
+        actor.attemptsTo(DoAnAction.changeTahunMasuk());
+    }
+
+    @Then("{actor} click on new entering year")
+    public void userClickOn(Actor actor) {
+        actor.attemptsTo(DoAnAction.clickOnNewEnteringYear());
+    }
+
+    @Then("{actor} change Fakultas")
+    public void userChangeFakultas(Actor actor) {
+        actor.attemptsTo(DoAnAction.changeFakultas());
+    }
+
+    @Then("{actor} click on fakultas ekonomi")
+    public void userClickOnFakultasEkonomi(Actor actor) {
+        actor.attemptsTo(DoAnAction.clickOnFakultasEkonomi());
+    }
+
+    @Then("{actor} change jurusan")
+    public void userChangeJurusan(Actor actor) {
+        actor.attemptsTo(DoAnAction.changeJurusan());
+    }
+
+    @Then("{actor} click on jurusan astronomi")
+    public void userClickOnJurusanAkuntansi(Actor actor) {
+        actor.attemptsTo(DoAnAction.clickOnJurusanAstronomi());
+    }
+
+    @Then("{actor} click on update button")
+    public void userClickOnUpdateButton(Actor actor) {
+        actor.attemptsTo(DoAnAction.clickOnUpdateButton());
+    }
+
+    @Then("{actor} click on Back button to list of mahasiswa")
+    public void userClickOnBackButtonToListOfMahasiswa(Actor actor) {
+        actor.attemptsTo(DoAnAction.clickOnBackButtonToListOfMahasiswa());
+    }
 }
 
 
